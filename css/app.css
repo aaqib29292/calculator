@@ -1,3 +1,46 @@
-
+#calculator {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: white;
+  width: 70vh;
+  margin: 0 auto; }
+  #calculator #result {
+    height: 20vh;
+    font-weight: 700;
+    font-size: 12vh;
+    color: black;
+    text-align: right;
+    line-height: 20vh;
+    background-color: whitesmoke; }
+  #calculator #preview {
+    height: 10vh;
+    font-weight: 400;
+    font-size: 7vh;
+    color: black;
+    text-align: right;
+    line-height: 10vh;
+    background-color: #dbdbdb; }
+  #calculator #keypad {
+    background-color: #424242;
+    text-align: center;
+    font-weight: 400;
+    cursor: pointer; }
+    #calculator #keypad .key:hover {
+      background-color: #5c5c5c; }
+    #calculator #keypad .key::selection {
+      background: transparent; }
+    #calculator #keypad #numbers {
+      padding: 0; }
+      #calculator #keypad #numbers .key {
+        height: 17.5vh;
+        font-size: 4vh;
+        line-height: 17.5vh; }
+    #calculator #keypad #operators {
+      background-color: #636363;
+      padding: 0; }
+      #calculator #keypad #operators .key {
+        height: 14vh;
+        font-size: 4vh;
+        line-height: 14vh; }
 
 /*# sourceMappingURL=app.css.map */

@@ -1,0 +1,70 @@
+$dark-bg-color: #424242;
+$light-bg-color: #636363;
+
+
+#calculator {
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: white;
+  width: 70vh;
+  margin: 0 auto;
+
+
+  #result {
+    height: 20vh;
+    font-weight: 700;
+    font-size: 12vh;
+    color: black;
+    text-align: right;
+    line-height: 20vh;
+    background-color: lighten($dark-bg-color, 70%);
+  }
+
+  #preview {
+    height: 10vh;
+    font-weight: 400;
+    font-size: 7vh;
+    color: black;
+    text-align: right;
+    line-height: 10vh;
+    background-color: lighten($dark-bg-color, 60%);
+  }
+
+  #keypad {
+    background-color: $dark-bg-color;
+    text-align: center;
+    font-weight: 400;
+    cursor: pointer;
+
+
+    .key {
+      &:hover {
+        background-color: lighten($dark-bg-color, 10%);
+      }
+      &::selection {
+        background: transparent;
+      }
+    }
+    #numbers {
+      .key {
+        height: 17.5vh;
+        font-size: 4vh;
+        line-height: 17.5vh;
+      }
+      padding: 0;
+    }
+
+    #operators {
+      background-color: #636363;
+      .key {
+        height: 14vh;
+        font-size: 4vh;
+        line-height: 14vh;
+      }
+      padding: 0;
+    }
+
+  }
+
+}
