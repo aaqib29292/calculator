@@ -11,7 +11,8 @@
     color: black;
     text-align: right;
     line-height: 20vh;
-    background-color: whitesmoke; }
+    background-color: whitesmoke;
+    overflow: hidden; }
   #calculator #preview {
     height: 10vh;
     font-weight: 400;
@@ -19,7 +20,8 @@
     color: black;
     text-align: right;
     line-height: 10vh;
-    background-color: #dbdbdb; }
+    background-color: #dbdbdb;
+    overflow: hidden; }
   #calculator #keypad {
     background-color: #424242;
     text-align: center;

@@ -19,6 +19,7 @@ $light-bg-color: #636363;
     text-align: right;
     line-height: 20vh;
     background-color: lighten($dark-bg-color, 70%);
+    overflow: hidden;
   }
 
   #preview {
@@ -29,6 +30,7 @@ $light-bg-color: #636363;
     text-align: right;
     line-height: 10vh;
     background-color: lighten($dark-bg-color, 60%);
+    overflow: hidden;
   }
 
   #keypad {

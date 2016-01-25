@@ -19,6 +19,11 @@ var Calculator = {
       Calculator.handleInput("0");
     }
   },
+  evaluateResult: function() {
+    var result = eval(Calculator.previewContent());
+    $("#preview").html(result);
+    $("#result").html(result);
+  },
   handleOperators: function(key) {
     // Successive operators corner case
     var lastChar = Calculator.previewContent().slice(-1);
@@ -43,6 +48,9 @@ var Calculator = {
     }
     else if (Calculator.keyIsOperator(key))  {
       Calculator.handleOperators(key);
+    }
+    else if (key == "="){
+      Calculator.evaluateResult();
     }
     else {
       Calculator.handleInput(key);
