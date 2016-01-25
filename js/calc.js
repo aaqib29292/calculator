@@ -2,7 +2,9 @@ function handleInput(key) {
   $("#preview").append(key);
 }
 
-
+function previewContent() {
+  return $("#preview").html();
+}
 
 
 
@@ -11,9 +13,16 @@ $(document).ready(function() {
     var key = $(this).text();
     // corner case of 0 key
     if(key == "0") {
-      if ($("#preview").html() != "0") {
+      if (previewContent() != "0") {
         handleInput(key);
       }
+    }
+    // corner case of DEL key
+    else if (key == "DEL") {
+      // var preview = $("#preview").html();
+      // var newPreview = preview.slice(0, -1);
+      // $("#preview").html(newPreview);
+      $("#preview").html(previewContent().slice(0, -1));
     }
     else {
       handleInput(key);
