@@ -37,6 +37,17 @@ var Calculator = {
       Calculator.handleInput(key);
     }
   },
+  handleDot: function() {
+    // exp to extract the lastestNumber 4m de preview after an operator
+    var patternForLastestNum = /[^\+\-\*\/]*$/;
+    // extracted lastestNumber after an operator
+    var lastestNumber = Calculator.previewContent().match(patternForLastestNum)[0];
+    if (lastestNumber.indexOf(".") == -1) {
+      Calculator.handleInput(".");
+    }
+  },
+
+
   handleGenericInput: function(key) {
     // corner case of 0 key
     if(key == "0") {
@@ -46,11 +57,14 @@ var Calculator = {
     else if (key == "DEL") {
       Calculator.deleteLastChar()
     }
-    else if (Calculator.keyIsOperator(key))  {
+    else if (Calculator.keyIsOperator(key)) {
       Calculator.handleOperators(key);
     }
-    else if (key == "="){
+    else if (key == "=") {
       Calculator.evaluateResult();
+    }
+    else if (key == ".") {
+      Calculator.handleDot();
     }
     else {
       Calculator.handleInput(key);
