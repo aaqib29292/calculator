@@ -46,6 +46,10 @@ var Calculator = {
       Calculator.handleInput(".");
     }
   },
+  clear: function() {
+    $("#preview").html("");
+    $("#result").html("");
+  },
 
 
   handleGenericInput: function(key) {
@@ -75,6 +79,9 @@ var Calculator = {
     $('.key').click(function() {
       var key = $(this).html();
       Calculator.handleGenericInput(key);
+    });
+    $('.delete').dblclick(function() {
+      Calculator.clear();
     });
   }
 
