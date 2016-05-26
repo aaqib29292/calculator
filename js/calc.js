@@ -21,7 +21,7 @@ var Calculator = {
   },
   evaluateResult: function() {
     var result = eval(Calculator.previewContent());
-    $("#preview").html(result);
+    $("#preview").html("");
     $("#result").html(result);
   },
   handleOperators: function(key) {
